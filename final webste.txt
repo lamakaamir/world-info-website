@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>World Information</h1>
+    <p>Explore fascinating facts and insights about the world!</p>
+</header>
+
+<nav>
+    <a href="#continents">Continents</a>
+    <a href="#countries">Countries</a>
+    <a href="#cultures">Cultures</a>
+</nav>
+
+<div class="container">
+    <section id="continents" class="section">
+        <h2>Continents</h2>
+        <p>The Earth has seven continents: Africa, Antarctica, Asia, Europe, North America, Oceania, and South America. Each is unique in geography, culture, and history.</p>
+    </section>
+
+    <section id="countries" class="section">
+        <h2>Countries</h2>
+        <p>There are 195 countries in the world today. Each country has its own flag, language, and traditions. Click below to learn more:</p>
+        <button onclick="loadCountryInfo()">Load Country Info</button>
+        <div id="country-info"></div>
+    </section>
+
+    <section id="cultures" class="section">
+        <h2>Cultures</h2>
+        <p>The world is rich with diverse cultures, languages, and traditions that make every region unique and fascinating.</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 World Information. All rights reserved.</p>
+</footer>
+
+<script>
+    function loadCountryInfo() {
+        const countryInfoDiv = document.getElementById('country-info');
+        countryInfoDiv.innerHTML = `
+            <ul>
+                <li>USA: Known for its cultural diversity and innovation.</li>
+                <li>India: Famous for its rich history and vibrant festivals.</li>
+                <li>Brazil: Home to the Amazon rainforest and colorful carnivals.</li>
+            </ul>
+        `;
+    }
+</script>
+
+</body>
+</html>
